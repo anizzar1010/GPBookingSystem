@@ -9,3 +9,11 @@ UPDATE Appointment
 SET Status = 'Scheduled',
 AppointmentDateANDTime = '2024-07-24 09:20:00'
 WHERE id = 2;
+
+Booking an appointment
+
+INSERT INTO Appointment
+VALUES (NULL, <StaffID>, <PatientID>, '2024-07-24 09:20:00', 'urgent issue', <ResourceID>);
+
+Adding Staff
+INSERT INTO Staff VALUES (NULL, 'Dave,' 'West', 'dave.west@example.com');
