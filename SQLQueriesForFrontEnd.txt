@@ -13,7 +13,7 @@ WHERE id = 2;
 Booking an appointment
 
 INSERT INTO Appointment
-VALUES (NULL, <StaffID>, <PatientID>, '2024-07-24 09:20:00', 'urgent issue', <ResourceID>, 'Scheduled', 1);
+VALUES (NULL, <StaffID>, <PatientID>, '2024-07-24 09:20:00', 'urgent issue', <ResourceID>, 'Scheduled', <GPID>);
 
 Adding Staff
 
@@ -28,24 +28,15 @@ VALUES (NULL, 'Alice', 'Johnson', '1990-05-15', 'alice.johnson@example.com', '12
 Viewing an appointments with the Patient Name and Staff Name and Resource Name
 
 SELECT
-    -- Appointment Table
     Appointment.id AS AppointmentID,
     Appointment.AppointmentDateANDTime,
     Appointment.ReasonForAppointment,
     Appointment.Status AS AppointmentStatus,
-
-    -- Patient Table
     Patient.FirstName AS PatientFirstName,
     Patient.LastName AS PatientLastName,
-
-    -- Staff Table
     Staff.FirstName AS StaffFirstName,
     Staff.LastName AS StaffLastName,
-
-    -- Resource Table
     Resource.ResourceName AS ResourceName,
-
-    -- GP Table
     GP.FirstName AS GPFirstName,
     GP.LastName AS GPLastName
 
@@ -60,4 +51,4 @@ LEFT JOIN
 LEFT JOIN
     GP ON Appointment.GPID = GP.id
 WHERE
-    Appointment.id = 1; -- Replace with a specific AppointmentID to test
+    Appointment.id = 1;
