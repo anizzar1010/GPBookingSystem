@@ -1,0 +1,11 @@
+-----NUMBER OF ALIMENTS-----
+SELECT Ailments, COUNT(*) AS NumberOfPatients
+FROM Patient
+GROUP BY Ailments;
+
+-----NUMBER OF CANCELLED APPOINTMENTS-----
+SELECT Patient.*, COUNT(Status) AS 'Cancellations'
+FROM Appointment
+INNER JOIN Patient ON Appointment.PatientID = Patient.PatientID
+WHERE Status = 'Cancelled'
+GROUP BY id;
