@@ -16,9 +16,11 @@ INSERT INTO Appointment
 VALUES (NULL, <StaffID>, <PatientID>, '2024-07-24 09:20:00', 'urgent issue', <ResourceID>);
 
 Adding Staff
+
 INSERT INTO Staff 
 VALUES (NULL, 'Dave,' 'West', 'dave.west@example.com');
 
 Adding a Patient
+
 INSERT INTO Patient
 VALUES (NULL, 'Alice', 'Johnson', '1990-05-15', 'alice.johnson@example.com', '1234567890', 'AB12 3CD');
