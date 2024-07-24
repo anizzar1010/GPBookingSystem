@@ -43,7 +43,11 @@ SELECT
     Staff.LastName AS StaffLastName,
 
     -- Resource Table
-    Resource.ResourceName AS ResourceName
+    Resource.ResourceName AS ResourceName,
+
+    -- GP Table
+    GP.FirstName AS GPFirstName,
+    GP.LastName AS GPLastName
 
 FROM
     Appointment
@@ -53,5 +57,7 @@ JOIN
     Staff ON Appointment.StaffID = Staff.StaffID
 LEFT JOIN
     Resource ON Appointment.ResourceID = Resource.id
+LEFT JOIN
+    GP ON Appointment.GPID = GP.id
 WHERE
     Appointment.id = 1; -- Replace with a specific AppointmentID to test
