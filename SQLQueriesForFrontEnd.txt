@@ -13,7 +13,7 @@ WHERE id = 2;
 Booking an appointment
 
 INSERT INTO Appointment
-VALUES (NULL, <StaffID>, <PatientID>, '2024-07-24 09:20:00', 'urgent issue', <ResourceID>, 'Scheduled');
+VALUES (NULL, <StaffID>, <PatientID>, '2024-07-24 09:20:00', 'urgent issue', <ResourceID>, 'Scheduled', 1);
 
 Adding Staff
 
