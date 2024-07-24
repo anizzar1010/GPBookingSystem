@@ -1,0 +1,11 @@
+Cancelling or Amending an Appointment
+
+UPDATE Appointment
+SET Status = 'Cancelled',
+AppointmentDateANDTime = NULL
+WHERE id = 2;
+
+UPDATE Appointment
+SET Status = 'Scheduled',
+AppointmentDateANDTime = '2024-07-24 09:20:00'
+WHERE id = 2;
