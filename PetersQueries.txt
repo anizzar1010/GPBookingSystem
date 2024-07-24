@@ -10,7 +10,13 @@ INNER JOIN Patient ON Appointment.PatientID = Patient.PatientID
 WHERE Status = 'Cancelled'
 GROUP BY id;
 
------HOW MANY PATIENTS EACH GP HAS SEEN-----
+-----HOW MANY APPOINTMENTS HAS EACH GP HAD TOTAL-----
+SELECT GP.*, COUNT(GPID) AS 'Appointments'
+FROM Appointment
+INNER JOIN GP ON GP.id = Appointment.GPID
+GROUP BY GP.id;
+
+-----HOW MANY PATIENTS EACH GP HAS SEEN THIS WEEK-----
 SELECT
     GP.id AS GPID,
     GP.FirstName AS GPFirstName,
